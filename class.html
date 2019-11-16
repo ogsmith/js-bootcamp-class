@@ -5,7 +5,7 @@
     <title></title>
   </head>
   <body>
-    <button type="button" name="create_paragraph">Create a Paragraph!</button>
+    <button type="button" id = 'button-one' name="create_paragraph">Create a Paragraph!</button>
 
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function() {
@@ -15,20 +15,9 @@
           document.body.appendChild(para);
         }
 
-        const buttons = document.querySelectorAll('button');
+        const buttons = document.getElementById('button-one');
 
-        for(let i = 0; i < buttons.length ; i++) {
-          buttons[i].addEventListener('click', createParagraph);
-        }
-
-        function addThese(number1,number2) {
-          const a = number1;
-          const b = number2;
-          const c = a + b;
-          const d = c.toString()
-          console.log(d)
-        }
-
+        buttons.addEventListener('click', createParagraph);
       });
     </script>
   </body>
